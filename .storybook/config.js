@@ -7,7 +7,7 @@ storybook.setAddon(infoAddon);
 setOptions({
     name: 'React Theming',
     url: 'https://github.com/sm-react/react-theming',
-    goFullScreen: true,
+    goFullScreen: false,
     showLeftPanel: true,
     showDownPanel: true,
     showSearchBox: false,
@@ -17,8 +17,6 @@ setOptions({
 storybook.configure(
     () => {
       require('../src/stories');
-      require('../src/ThemeSwitcher.story');
-      require('../src/MaterialUI/index.story');
     },
     module
 );

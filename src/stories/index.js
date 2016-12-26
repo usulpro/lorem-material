@@ -7,10 +7,7 @@ import { muiTheme } from 'storybook-addon-material-ui';
 import { WithNotes } from '@kadira/storybook-addon-notes';
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 
-import App from '../App';
-import Header from '../Header';
-import Intro from '../Intro';
-import '../App.css';
+import Card from '../blankMaterialAppExampleCard';
 
 const reqThemes = require.context('../.themes/', true, /.json/);
 const themesList = [];
@@ -25,7 +22,7 @@ reqThemes.keys().forEach((filename) => {
  */
 
 
-storiesOf('React App', module)
+const stories = storiesOf('React App', module)
     .addDecorator(muiTheme(themesList)) /* [lightTheme, darkTheme, greyTheme]*/
     .addDecorator(story => (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -35,39 +32,16 @@ storiesOf('React App', module)
         </div>
       </div>
     ))
-    .addDecorator(withKnobs)
-    .add('App', () => (
-      <App />
-    ))
-    .addWithInfo('App-header', '<Header />', () => withNote(
-      `
-        Header Component
+    .addDecorator(withKnobs);
 
-        source: src/Header.jsx
-        story: src/stories
-        test: src/tests
-      `,
-      <Header
-        title={text('Title', 'Welcome to React-Theming')}
-        subtitle={text('Subtitle', 'Storybook Boilerplate Project')}
-      />,
-    ))
-    .addWithInfo('App-intro', '<Intro />', () => withNote(
-      `
-        Intro Component
-
-        source: src/Intro.jsx
-        story: src/stories
-        test: src/tests
-      `,
-      <Intro />,
-    ))
-    .add('Addons Knobs & Notes', () => (
-      <div>
-        {text('Label1', 'Hello Button')}
-        {withNote(text('Label2', 'Hello Button'))}
-      </div>
-    ));
+const lorems = require.context('../', true, /Material\w*.jsx/);
+lorems.keys().forEach((filename) => {
+    const Ipsum = lorems(filename).default;
+    stories.add(
+        filename.replace(/^.\//, '').replace(/.jsx$/, ''),
+        () => <Ipsum />
+    );
+});
 
 
 function withNote(note, child) {

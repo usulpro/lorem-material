@@ -1,277 +1,123 @@
+# Lorem Material
 
-[<img src="doc/logo-small.png" align="left" class="logo" width="280" title="❤︎❤︎❤︎"/>](https://github.com/sm-react/react-theming/stargazers) 
+Set of _Lorem ipsum_ Material-UI forms for quick themes creating
 
-<div align="center" style="height: 16px;"><sub>Created with ❤︎ to <b>React</b> and <b>React Storybook</b> by <a href="https://twitter.com/UsulPro">UsulPro</a>.</sub></div>
-<img src="doc/margin.png" align="center" class="logo"/>
+## Material content filling
+![Material](doc/icons/ic_account_balance_black.png)
+For easy themes design we required a realistic-looking content. It will be possible to try out different themes and immediately see how they look. For this we feel the need of help by designers and front-end developers in material design. Therefore, we are opening this trend and attract **#hacktoberfest** participants. We welcome all who wish to contribute.
 
-**React-Theming** provides a set of tools for developing themable React apps with **React-Storybook** under the hood. This project includes three main parts:
+We propose to fill this library by adding small pages or applications - each in a separate [story](https://sm-react.github.io/storybook-addon-material-ui/?theme-ind=0&theme-sidebar=false&theme-full=false&selectedKind=Material%20App&selectedStory=Hactoberfest%20issues%3A&full=0&down=1&left=1&panelRight=0&downPanel=sm%2Fstorybook-addon-material-ui%2Fmaterial-panel). They should be made in the material design style and look like a real application (no need to use real data). We are pleased to see various interesting applications, but you can try your hand at creating something simple.
 
- :small_blue_diamond: | :small_blue_diamond:  |  :small_blue_diamond:  | :small_blue_diamond:  |  :small_blue_diamond:  
------- | ----- | ------ | ---- | ----
-[Addon for Storybook](https://github.com/sm-react/storybook-addon-material-ui) | The core of React-Theming | [![GitHub stars](https://img.shields.io/github/stars/sm-react/storybook-addon-material-ui.svg?style=social&label=Star)](https://github.com/sm-react/storybook-addon-material-ui) | [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://sm-react.github.io/storybook-addon-material-ui) | [![npm version](https://badge.fury.io/js/storybook-addon-material-ui.svg)](https://badge.fury.io/js/storybook-addon-material-ui) 
-[React Theme Provider](https://github.com/sm-react/react-theme-provider) | A generic theme provider and (very) simple CSS styler |  [![GitHub stars](https://img.shields.io/github/stars/sm-react/react-theme-provider.svg?style=social&label=Star)](https://github.com/sm-react/react-theme-provider) | [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://sm-react.github.io/react-theme-provider) | [![npm version](https://badge.fury.io/js/react-theme-provider.svg)](https://badge.fury.io/js/react-theme-provider)  
-[The Boilerplate Project](https://github.com/sm-react/react-theming#storybook-boilerplate-project) | Starting point for apps development | [![GitHub stars](https://img.shields.io/github/stars/sm-react/react-theming.svg?style=social&label=Star)](https://github.com/sm-react/react-theming) | [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://sm-react.github.io/react-theming) | [![GitHub version](https://badge.fury.io/gh/sm-react%2Freact-theming.svg)](https://badge.fury.io/gh/sm-react%2Freact-theming)
+We do not impose special restrictions to create pages, but please keep the following:
+- It should be in the [Material Design](https://material.google.com/) style
+- It should be based on the [Material-UI](http://www.material-ui.com/#/) library
+- Should look good with different themes
+- The appearance should rely on themes settings
+- Should not copy an already existing [story](https://sm-react.github.io/storybook-addon-material-ui)
+- Each story in a separate file (or a folder)
 
----
+### to initiate the participation [fork this project](https://github.com/UsulPro/lorem-material/fork).
 
-## Storybook Boilerplate Project
+![Material](doc/icons/ic_flight_takeoff.png)
+Take `src/blankMaterialAppExampleProgress.jsx` as a starting point of development.
 
-[![GitHub version](https://badge.fury.io/gh/sm-react%2Freact-theming.svg)](https://badge.fury.io/gh/sm-react%2Freact-theming)
-[![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://sm-react.github.io/react-theming)
+This project is built on the [React Storybook](https://getstorybook.io/docs) platform. It's a great basis for creating React components and applications. We create each `Lorem Material Page` as a separate `React Component` and add them as a story into storybook automatically.
 
-[<img src="doc/logos/Storybook.png" alt="Storybook" title="Storybook" height="60">](http://getstorybook.io)
-[<img src="doc/logos/NodeJS.png" alt="NodeJS" title="NodeJS" height="60">](http://nodejs.org)
-[<img src="doc/logos/webpack.png" alt="Webpack" title="Webpack" height="60">](http://webpack.js.org)
-[<img src="doc/logos/react.png" alt="React" title="React" height="60">](http://facebook.github.io/react)
-[<img src="doc/logos/eslint.png" alt="ESLint" title="ESLint" height="60">](http://eslint.org)
-[<img src="doc/logos/Jest.png" alt="Jest" title="Snapshot Testing" height="60">](https://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
-[<img src="doc/logos/mocha.png" alt="Mocha" title="MochaJS" height="60">](http://mochajs.org)
-[<img src="doc/logos/chai.png" alt="Chai" title="ChaiJS" height="60">](http://chaijs.com)
-[<img src="doc/logos/Material-UI.png" alt="Material-UI" title="Material-UI" height="60">](http://material-ui.com)
+We use material-ui components from [Material-UI](http://www.material-ui.com/#/) set  - The most popular and complete library for React that Implement Google's Material Design.
 
-At the heart of this project the desire to collect the best practices of application development via [React-Storybook](https://github.com/storybooks/react-storybook) environment. This project is transparent and friendly for developers. You do not need to eject anything. Therefore you can easily add your own configuration and extend it using any packages.
+The aim of our [project (storybook-addon-material-ui)](https://github.com/sm-react/storybook-addon-material-ui) is to create a comfortable environment for designers and developers allows them to work with React components based on the use of the [theming](https://facebook.github.io/react/docs/context.html#passing-info-automatically-through-a-tree) approach. This approach allows us to decouple the functionality and appearance of components. Teming can transmit various data and properties in components: color, size, styles, and the like. We are working to expand the available options.
 
-It contains the *fully-charged* setup of the Storybook with **pre-installed plugins**, configuration, quick examples, and tips. Inspired by [Create React App](https://github.com/facebookincubator/create-react-app) and [React CDK](https://github.com/kadirahq/react-cdk).
+We support [Material-UI Themes](http://www.material-ui.com/#/customization/themes) now.
 
---
+###### Creating Themed Components
 
-### Features
+It's possible to create theme related components in two ways. Firstly, you can combine ready-made `Material-UI` elements into your component. They themselves support themes, so you don't need to do anything more. 
 
-Since we are now at the starting point, we mark with [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) icon features that will be implemented in the near future. See our further plans in the [roadmap](#roadmap) section.
+The second case occurs when you want to add own non `Material-UI` element and set its appearance based on the theme settings. You can do it manually by fetching theme data from the content and applying it to your elements. Look at this brief example:
 
-- **React Storybook Addons**:
+```
+const contextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+};
 
-     🔋 [React Storybook Info Addon](https://github.com/storybooks/react-storybook-addon-info) - *show additional <b>information</b> for your stories*
+function HelloLabel(props, context) {
+    const { palette } = context.muiTheme;
+    const textStyle = {
+        color: palette.textColor,
+        backgroundColor: palette.canvasColor,
+    };
+    
+    return (
+      <div style={textStyle}>Hello, @{props.name}!</div>
+      );
+}
+HelloLabel.propTypes = {
+    name: React.PropTypes.string.isRequired,
+};
+HelloLabel.contextTypes = contextTypes;
 
-     🔋 [Storybook Addon Notes](https://github.com/storybooks/storybook-addon-notes) - *allows you to write <b>notes</b> for your stories*
+```
+Here we created a component which appearance is depended on current theme setting.
 
-     🔋 [Storybook Addon Actions](https://github.com/storybooks/storybook-addon-actions) (included by default) - *the <b>Action Logger</b> addon can be used to display data received by event handlers*
+You can achieve the same result with `react-theme-provider`. You just need to wrap you non-material components:
 
-     🔋 [Storybook Addon Knobs ](https://github.com/storybooks/storybook-addon-knobs) - *allows you to <b>edit</b> React props dynamically*
+```
+<ThemeProvider>
+  <YourThemedComponentOrPlainHTML />
+</ThemeProvider>
+```
 
-     🔋 [Storybook Addon Material-UI](https://github.com/sm-react/storybook-addon-material-ui) - *provides live <b>theme</b> creating environment to React Storybook*
+See details in the [docs](https://github.com/sm-react/react-theme-provider) of React Theme Provider
 
-- **Testing**:
+You can edit theme data directly in the down-panel as a JSON structure. You can also edit the settings in the right panel using convenient tools. In any case, all changes will be immediately displayed in the selected story. Creating a new theme you need to specify only the parameters you want to override. All others will be taken from the base theme automatically. Please note that the settings specified in the pallete object will automatically be propagated to other objects. But you can set them directly. This is provided by the Material-UI library.
+> When you finished editing your theme via this Storybook addon save it to your project folder. So you could continue working from this point later or use it in your app.
 
-     [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) [StoryShots](https://github.com/storybooks/storyshots) - *provides [Snapshot Testing](https://facebook.github.io/jest/blog/2016/07/27/jest-14.html) for React Storybook*
- 
-     🔋 [Mocha](https://github.com/mochajs/mocha) and [Enzyme](https://github.com/airbnb/enzyme)
+```
+import greyTheme from './greyTheme.json';
+addDecorator(muiTheme(greyTheme));
+```
 
-- **React ecosystem**:
+To learn more about material design follow the [link](https://material.google.com/)
 
-     🔋 [Material-UI](http://www.material-ui.com/#/) - *via [Storybook Addon Material-UI](https://github.com/sm-react/storybook-addon-material-ui)*
- 
-     🔋 [React Theme Provider](https://github.com/sm-react/react-theme-provider)
+We always welcome your questions, suggestions and ideas.
 
-- **Workflow *(via NPM scripts command)*:**
+### For more details about the process of developing
 
-     🔋 Support for Linux, macOS, and Windows
+- [make a fork](https://github.com/sm-react/storybook-addon-material-ui/fork).
 
-     [<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Build your App with [Webpack](https://github.com/webpack/webpack) and [Babel](https://github.com/babel/babel)
- 
-     🔋 Publish transpiled code into NPM
- 
-     🔋 Run tests
+- clone your repo to local machine and install
 
-     🔋 [ESLint](https://github.com/eslint/eslint) with the [Airbnb style guide](https://github.com/airbnb/javascript)
- 
-     🔋 Deploy your storybook to GitHub Pages
- 
---
-
-### Roadmap
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Add support for **Storybook 3** features
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Add [Styled Components](https://github.com/styled-components/styled-components) support
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Deploy your App to GitHub Pages
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) [storybook-addon-comments](https://github.com/storybooks/storybook-addon-comments) - *allows you to add comments for your stories*
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) [storybook-addon-options](https://github.com/storybooks/storybook-addon-options) - *set configure the Storybook UI*
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Short tutorial for using this tools
-
-[<img src="doc/msm.png" alt="Milestone" width="22">](#roadmap) Suggest your [feature](/../../issues) which you'd like to see here!
-
---
-
-### Quick start
-
-###### Install the project
-
->tip: you can skip this step if you only want to look at this project. Just open [live demo](https://sm-react.github.io/react-theming) page and continue from [here](#you-will-see-the-demo-page-provided-by-react-storybook)
-
-```shell
-git clone https://github.com/sm-react/react-theming.git
-cd react-theming
+```
+git clone https://github.com/YOUR-NAME/lorem-material.git
+cd lorem-material
 npm i
+```
+
+- Find `src/blankMaterialAppExampleProgress.jsx` and use it as a blank to start developing.
+
+
+- Start storybook and check how it looks. Due to the [HMR] you will immediately see all the changes made to the file. Try different themes.
+```
 npm start
 ```
 
-[<img src="doc/npm-start.png" align="right" class="logo" width="500" title="launching the Storybook"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-start.png) 
-
-Open http://localhost:9001/ in your browser.
-
-###### You will see the demo page provided by React Storybook.
-
-Press `Ctrl-Shft-F` to exit from `Full screen` mode.
-
-Two panel will appear. You will see the list of `stories` at the left panel and the bottom panel for working with themes.
-
-Let's select another theme for this page. Do it via drop-down list at the bottom panel. Out of the box there are three themes: 'Light', 'Dark' and 'Gray'. Check out them.
-
-[<img src="doc/left-pane.png" align="left" width="180" title="Left Storybook panel"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/left-pane.png) 
-
-Note the text field with the full theme data. You can change any property and instantly see how the result will affect the appearance of the page. But the best way to edit theme is to use `Theme Editor`. 
-
-Click to `Show Theme Editor`. It'll open a panel with a list of all theme props at the right. Click to any colored box in this list to open the color picker tool, for example on `textColor`. Now you can move your mouse over the color swatches and see how the color of text is changing.
-
-When you feel enough to edit your theme, you can save it for future use. Press [<img src="doc/save-btn.png" width="20"/>](#you-will-see-the-demo-page-provided-by-react-storybook) to create a JSON file with your theme. Put it to `src/themes/` folder in your project to include it to your theme list automatically. **Note**: you don't need to restart your app after adding a new theme-file to this folder, just refresh your browser. **Roadmap**: we are working to eliminate even this need to refresh the page after adding a file.
-
-[<img src="doc/bottom-pane.png" align="right" width="500" title="Bottom theming panel"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/bottom-pane.png)
-
-Okay, now let's look at the panel on the left. In fact, our application consists of two components: `src/Header.jsx` and `src/Intro.jsx`. Selecting the appropriate items in the left-side list you switch to an isolated view of the component. It's how `React Storybook` works - allows you 'step-by-step' to create and works with React components. You can improve the quality of development by applying different addons to Storybook. Most of them is already pre-installed in this project. You will find excellent [documentation and examples](https://getstorybook.io/docs/) on the React Storybook website.
-
----
-
-### Scripts
-
-All scripts are avalible via `npm run <script_name>`. Mostly executable scripts are located in the '.scripts' folder of your project. In oder to keep it "transparent and friendly" we display a full CLI command which will be executed.
-
-You can list all scripts by `npm run`
-
-<details>
-  <summary>
-    <b>Linting</b> <br> `npm lint` - lints your code within `src` folder <br> `npm lintfix` - tries to fix linting errors <br>
-  </summary>
-  
-  This project uses [ESLint](https://github.com/eslint/eslint) with the [Airbnb style guide](https://github.com/airbnb/javascript). It has some minor overrides as well. I'll [find](https://github.com/sm-react/react-theming/blob/master/.eslintrc) all ESLint settings in `.eslintrc` file located in the root of your project. 
-  
-  [<img src="doc/npm-lint.png" align="right" class="logo" width="486" title="linting"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-lint.png)
-  
-  This linting scripts will check your code in `*.js` and `*.jsx` files within the `src` folder.
-    
-  If your IDE supports the linting settings from `.eslintrc` you'll be able to see same issues bouth from IDE and CLI.
-  
-  **Note**: Some [files](https://github.com/sm-react/react-theming/blob/master/src/Intro.jsx#L1-L2) in `src` use the comments to suppress linting errors. It's up to you to continue using them or remove and change code style appropriately.
-
-</details>
-
---
-
-<details>
-  <summary>
-    <b>Publish to NPM</b> <br> `npm publish` - publish your code to NPM<br>
-  </summary>
-  
-The publish script first transpille your code to ES5 and put it to `dist` folder, which is cleared before each transpillation.
-
-[<img src="doc/npm-publish.png" align="right" class="logo" width="560" title="publish to NPM"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-publish.png)
-
-This project uses [Babel](https://github.com/babel/babel) for transpilling your code with following presets:
-
-- [es2015](http://babeljs.io/docs/plugins/preset-es2015/)
-
-- [stage-0](http://babeljs.io/docs/plugins/preset-stage-0/)
-
-- [react](http://babeljs.io/docs/plugins/preset-react/)
-
->be careful with stage-0 features because they are far from the final stage!
-
-It's setted up to transpille all `*.js` and `*.jsx` files in your `src` folder, exept `test` and `stories` folders and `*.story.jsx` files.
-
-You'll [find](https://github.com/sm-react/react-theming/blob/master/.babelrc) your transpillation settings in the `.babelrc` file located in the root of your project.
-
-In some cases you need only transpille your code, not publish. So use `npm run prepublish` and get you ES5 code in the `dist` folder.
-
->Transplling your code to ES5 helps to use it in any other projects without warring about babel settings of these projects.
- 
-**Note**: you need to set at least your own [name](https://github.com/sm-react/react-theming/blob/master/package.json#L2) and [version](https://github.com/sm-react/react-theming/blob/master/package.json#L3) in `package.json` before publishing. You might want to set other [fields](https://docs.npmjs.com/files/package.json) as well. 
-  
-  
-</details>
-
---
-
-<details>
-  <summary>
-    <b>Deploy Storybook</b> <br> `npm run deploy` - deploys your storybook to Github Pages<br>
-  </summary>
-
-Now it supports only Github Pages.
-
-[<img src="doc/npm-deploy.png" align="right" class="logo" width="646" title="deploy to Github"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-deploy.png)
- 
-This script uses your `git` remote `origin` url to get your repo. You can check it out by `git remote get-url origin`.
- 
-**Note** if you get this project by `git clone` command, you need to remove current git settings and add your own repo. If you've already created your Github repo you could setup git this way:
-
+- Check codestyle.
 ```
-rm -rf .git
-git init
-git remote add origin https://github.com/UserName/RepoName.git
+npm run lint
 ```
 
-You'll find your repo's adress pressing `Clone or download` button at your github repo page.
+- You can try to fix some erorrs automatically
 
-</details>
+```
+npm run lintfix
+```
 
---
+- Make commit and push it to github: 
 
-<details>
-  <summary>
-    <b>Test</b> <br> `npm run testonly` - runs mocha tests<br> `npm run test-watch` - runs tests continuously<br>
-  </summary>
+```
+git commit -m «my ready to PR story»
+git push
 
-It will find `tests` folder within `src` and run them once.
+```
 
-[<img src="doc/npm-testonly.png" align="right" class="logo" width="613" title="run tests"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-testonly.png)
- 
-**Note**: we have a `svg` file imported in `<Header />` component. This script is [setted up](.scripts/run_tests/mocha_runner.js) to ignore images with such extensions.
-
-`npm run test-watch` - starts to monitor changes in your `js`, `jsx` and `json` files
-
-</details>
-
---
-
-<details>
-  <summary>
-    <b>Info</b> <br> `npm run status` - displays summary information about NPM package, linting errors and mocha tests
-  </summary>
-
-#### [<img src="doc/npm-status.png" align="right" class="logo" width="764" title="run status"/>](https://raw.githubusercontent.com/sm-react/react-theming/master/doc/npm-status.png)
-
-</details>
-
----
-
-### FAQ
-
---
->**[1]** I'm not going to create a themable app. Will I find something useful in this boilerplate project?
-
-<sub>Yes! You still have a powerful dev environment with React Storybook addons, testing and workflow features.</sub>
-
---
->**[2]** I'm not going to use Material-UI (any other tool) in my app. Will I find something usefull in this boilerplate project?
-
-<sub>Yes! You still have a powerful dev environment with React Storybook addons, testing and workflow features.</sub>
-
---
->**[3]** I'd like to see my [favorite tool](https://github.com/facebook/react/wiki/Complementary-Tools) in this project.
-
-<sub>Create an [issue](/../../issues) with your suggestion. We'll be glad to discuss it and we love adding new features!</sub>
-
---
->**[4]** What if I need some other package in my project?
-
-<sub>Just install it via `npm` or `yarn`. Since this project does not have any hidden configurations, you are free to continue to work with it as you normally would.</sub>
-
----
-
-### Contribute
-
-We'll appreciate any help, ideas, issues and feedback!
+- Make  Pull request from your Github repo. 
