@@ -2,6 +2,10 @@
 
 Set of _Lorem ipsum_ Material-UI forms for quick themes creating. You can use this project to try your hands in React development.
 
+install:
+```shell
+npm i git+https://github.com/UsulPro/lorem-material.git --save
+```
 
 ## Material content filling
 ![Material](doc/icons/ic_account_balance_black.png)
