@@ -20,11 +20,11 @@ var _RaisedButton = require('material-ui/RaisedButton');
 
 var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
-var _reactTwitterButton = require('../react-twitter-button');
+var _reactTwitterButton = require('./socials/react-twitter-button');
 
 var _reactTwitterButton2 = _interopRequireDefault(_reactTwitterButton);
 
-var _reactGithubButton = require('../react-github-button');
+var _reactGithubButton = require('./socials/react-github-button');
 
 var _reactGithubButton2 = _interopRequireDefault(_reactGithubButton);
 
@@ -39,15 +39,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var MaterialAppExampleProgress = function (_React$Component) {
   _inherits(MaterialAppExampleProgress, _React$Component);
 
-  function MaterialAppExampleProgress(props) {
+  function MaterialAppExampleProgress() {
     _classCallCheck(this, MaterialAppExampleProgress);
 
-    var _this = _possibleConstructorReturn(this, (MaterialAppExampleProgress.__proto__ || Object.getPrototypeOf(MaterialAppExampleProgress)).call(this, props));
-
-    _this.state = {
-      expanded: false
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (MaterialAppExampleProgress.__proto__ || Object.getPrototypeOf(MaterialAppExampleProgress)).apply(this, arguments));
   }
 
   _createClass(MaterialAppExampleProgress, [{
@@ -93,7 +88,7 @@ var MaterialAppExampleProgress = function (_React$Component) {
                   style: {
                     fontVariant: 'small-caps',
                     fontWeight: 'bold',
-                    color: this.context.muiTheme.palette.secondaryTextColor
+                    color: this.context.muiTheme.palette.textColor
                   }
                 },
                 'waiting for contributors'

@@ -16,6 +16,8 @@ var _AutoComplete = require('material-ui/AutoComplete');
 
 var _AutoComplete2 = _interopRequireDefault(_AutoComplete);
 
+var _Card = require('material-ui/Card');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34,24 +36,14 @@ var PizzaOrder = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (PizzaOrder.__proto__ || Object.getPrototypeOf(PizzaOrder)).call(this, props));
 
-    _this.handelRequestDelete = function (data) {
-      _this.chipData = _this.state.toppings;
-      _this.chipData.filter(function (chip) {
-        return chip.label === data.label ? '' : chip;
-      });
-      _this.setState({
-        toppings: _this.chipData
-      });
-    };
-
     _this.state = {
       toppings: [{ label: 'Cheese' }, { label: 'Tomato Sauce' }],
-      size: ''
+      size: 'Large'
     };
     _this.renderChip = _this.renderChip.bind(_this);
     _this.addToppings = _this.addToppings.bind(_this);
     _this.handleChange = _this.handleChange.bind(_this);
-    _this.handelRequestDelete = _this.handelRequestDelete.bind(_this);
+    _this.handleRequestDelete = _this.handleRequestDelete.bind(_this);
     return _this;
   }
 
@@ -63,24 +55,33 @@ var PizzaOrder = function (_Component) {
       });
     }
   }, {
+    key: 'handleRequestDelete',
+    value: function handleRequestDelete(data) {
+      var _this2 = this;
+
+      return function () {
+        var toppings = _this2.state.toppings.filter(function (val) {
+          return val.label !== data.label;
+        });
+        _this2.setState({ toppings: toppings });
+      };
+    }
+  }, {
     key: 'addToppings',
     value: function addToppings(value, index) {
       var newTop = { label: value };
-      var toppings = this.state.toppings.append(newTop);
+      var toppings = this.state.toppings.concat(newTop);
       this.setState({ toppings: toppings });
     }
   }, {
     key: 'renderChip',
     value: function renderChip(data, index) {
-      var _this2 = this;
-
       return _react2.default.createElement(
         _materialUi.Chip,
         {
           key: index,
-          onRequestDelete: function onRequestDelete() {
-            return _this2.handleRequestDelete.bind(null, data);
-          }
+          onRequestDelete: this.handleRequestDelete(data),
+          style: { margin: 4 }
         },
         data.label
       );
@@ -90,34 +91,80 @@ var PizzaOrder = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(_materialUi.TextField, {
-          floatingLabelText: 'Name',
-          floatingLabelFixed: true
-        }),
-        _react2.default.createElement(_materialUi.TextField, {
-          floatingLabelText: 'Phone Number',
-          floatingLabelFixed: true
-        }),
+        {
+          style: {
+            margin: '20px 100px',
+            minWidth: 200,
+            maxWidth: 600,
+            display: 'flex',
+            justifyContent: 'center'
+          } },
         _react2.default.createElement(
-          _materialUi.DropDownMenu,
-          { value: this.state.size, onChange: this.handleChange },
-          _react2.default.createElement(_materialUi.MenuItem, { value: 'Small', primaryText: 'Small' }),
-          _react2.default.createElement(_materialUi.MenuItem, { value: 'Medium', primaryText: 'Medium' }),
-          _react2.default.createElement(_materialUi.MenuItem, { value: 'Large', primaryText: 'Large' }),
-          _react2.default.createElement(_materialUi.MenuItem, { value: 'XL', primaryText: 'Extra Large' })
-        ),
-        _react2.default.createElement(_AutoComplete2.default, {
-          floatingLabelText: 'More Toppings',
-          filter: Autocomplete.fuzzyFilter,
-          dataSource: extraToppings,
-          maxSearchResults: 5,
-          onNewRequest: this.addToppings
-        }),
-        _react2.default.createElement(
-          'div',
-          null,
-          this.state.toppings.map(this.renderChip, this)
+          _Card.Card,
+          { style: { width: '100%' } },
+          _react2.default.createElement(
+            _Card.CardText,
+            null,
+            _react2.default.createElement(
+              'div',
+              {
+                style: {
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'baseline'
+                }
+              },
+              _react2.default.createElement(_materialUi.TextField, {
+                floatingLabelText: 'Name',
+                floatingLabelFixed: true,
+                value: 'John Dow'
+              }),
+              _react2.default.createElement('div', { style: { width: 20 } }),
+              _react2.default.createElement(_materialUi.TextField, {
+                floatingLabelText: 'Phone Number',
+                floatingLabelFixed: true,
+                value: '+1 (666) 277-9889'
+              })
+            )
+          ),
+          _react2.default.createElement(
+            _materialUi.DropDownMenu,
+            {
+              value: this.state.size,
+              onChange: this.handleChange,
+              autoWidth: false,
+              style: { width: '100%' }
+            },
+            _react2.default.createElement(_materialUi.MenuItem, { value: 'Small', primaryText: 'Small' }),
+            _react2.default.createElement(_materialUi.MenuItem, { value: 'Medium', primaryText: 'Medium' }),
+            _react2.default.createElement(_materialUi.MenuItem, { value: 'Large', primaryText: 'Large' }),
+            _react2.default.createElement(_materialUi.MenuItem, { value: 'XL', primaryText: 'Extra Large' })
+          ),
+          _react2.default.createElement(
+            _Card.CardText,
+            null,
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement(
+                'div',
+                {
+                  style: {
+                    display: 'flex',
+                    flexWrap: 'wrap'
+                  }
+                },
+                this.state.toppings.map(this.renderChip)
+              ),
+              _react2.default.createElement(_AutoComplete2.default, {
+                floatingLabelText: 'More Toppings',
+                filter: _AutoComplete2.default.fuzzyFilter,
+                dataSource: extraToppings,
+                maxSearchResults: 5,
+                onNewRequest: this.addToppings
+              })
+            )
+          )
         )
       );
     }

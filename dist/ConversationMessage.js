@@ -20,11 +20,11 @@ var _RaisedButton = require('material-ui/RaisedButton');
 
 var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
-var _reactTwitterButton = require('../react-twitter-button');
+var _reactTwitterButton = require('./socials/react-twitter-button');
 
 var _reactTwitterButton2 = _interopRequireDefault(_reactTwitterButton);
 
-var _reactGithubButton = require('../react-github-button');
+var _reactGithubButton = require('./socials/react-github-button');
 
 var _reactGithubButton2 = _interopRequireDefault(_reactGithubButton);
 

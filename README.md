@@ -1,6 +1,7 @@
-# Lorem Material
+# Lorem Material [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://usulpro.github.io/lorem-material/)
 
-Set of _Lorem ipsum_ Material-UI forms for quick themes creating
+Set of _Lorem ipsum_ Material-UI forms for quick themes creating. You can use this project to try your hands in React development.
+
 
 ## Material content filling
 ![Material](doc/icons/ic_account_balance_black.png)

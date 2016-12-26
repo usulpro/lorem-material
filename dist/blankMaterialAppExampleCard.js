@@ -20,27 +20,27 @@ var _Toggle = require('material-ui/Toggle');
 
 var _Toggle2 = _interopRequireDefault(_Toggle);
 
-var _reactTwitterButton = require('../react-twitter-button');
+var _reactTwitterButton = require('./socials/react-twitter-button');
 
 var _reactTwitterButton2 = _interopRequireDefault(_reactTwitterButton);
 
-var _reactGithubButton = require('../react-github-button');
+var _reactGithubButton = require('./socials/react-github-button');
 
 var _reactGithubButton2 = _interopRequireDefault(_reactGithubButton);
 
-var _hacktoberfest_logo = require('./hacktoberfest_logo.svg');
+var _hacktoberfest_logo = require('./images/hacktoberfest_logo.svg');
 
 var _hacktoberfest_logo2 = _interopRequireDefault(_hacktoberfest_logo);
 
-var _sectionDividerCenter = require('./section-divider-center.svg');
+var _sectionDividerCenter = require('./images/section-divider-center.svg');
 
 var _sectionDividerCenter2 = _interopRequireDefault(_sectionDividerCenter);
 
-var _octo_avatar = require('./octo_avatar.png');
+var _octo_avatar = require('./images/octo_avatar.png');
 
 var _octo_avatar2 = _interopRequireDefault(_octo_avatar);
 
-var _ic_account_balance_black = require('./doc/ic_account_balance_black.png');
+var _ic_account_balance_black = require('./images/ic_account_balance_black.png');
 
 var _ic_account_balance_black2 = _interopRequireDefault(_ic_account_balance_black);
 
@@ -403,7 +403,7 @@ var MaterialAppExampleCard = function (_React$Component) {
               '. They should be made in the material design style and look like a real application (no need to use real data). We are pleased to see various interesting applications, but you can try your hand at creating something simple.'
             ),
             _react2.default.createElement(
-              'p',
+              'div',
               { style: { textAlign: 'justify', fontSize: 16 } },
               'We do not impose special restrictions to create pages, but please keep the following:',
               _react2.default.createElement(
@@ -500,7 +500,7 @@ var MaterialAppExampleCard = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              'p',
+              'div',
               null,
               Buttons
             )
