@@ -169,13 +169,7 @@ export default class MaterialAirlineBooking extends React.Component {
         }
 
         return (
-        <div
-          style={{
-              margin: '20px 100px',
-              minWidth: 400,
-              maxWidth: 450,
-          }}
-        >
+        <div>
           <Card style={{ width: '100%' }} >
             <CardHeader
               title="Airline booking component"

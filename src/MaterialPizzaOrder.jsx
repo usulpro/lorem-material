@@ -52,14 +52,7 @@ export default class PizzaOrder extends Component {
   }
   render(){
     return(
-      <div
-        style={{
-            margin: '20px 100px',
-            minWidth: 200,
-            maxWidth: 600,
-            display: 'flex',
-            justifyContent: 'center',
-      }}>
+      <div>
         <Card style={{ width: '100%' }}>
           <CardText>
             <div

@@ -9,16 +9,8 @@ import GithubButton from './socials/react-github-button';
 export default class MaterialAppExampleProgress extends React.Component {
     render() {
         return (
-          <div
-            style={{
-                margin: '20px 100px',
-                minWidth: 400,
-                maxWidth: 800,
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-          >
-            <Card style={{ width: '100%' }} >
+          <div style={{ minWidth: 400}}>
+            <Card style={{ width: '100%', paddingTop: 16}} >
               <CardMedia style={{ marginTop: 16 }}>
                 <LinearProgress mode="indeterminate" />
               </CardMedia>

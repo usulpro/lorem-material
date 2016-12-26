@@ -80,14 +80,7 @@ var MyTest = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        {
-          style: {
-            margin: '20px 100px',
-            minWidth: 400,
-            maxWidth: 800,
-            display: 'flex',
-            justifyContent: 'center'
-          } },
+        null,
         _react2.default.createElement(
           _Paper2.default,
           { style: paperStyle, zDepth: 1 },

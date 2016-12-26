@@ -132,13 +132,7 @@ var MaterialAirlineBooking = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        {
-          style: {
-            margin: '20px 100px',
-            minWidth: 400,
-            maxWidth: 450
-          }
-        },
+        null,
         _react2.default.createElement(
           _Card.Card,
           { style: { width: '100%' } },

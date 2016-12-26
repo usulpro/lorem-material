@@ -49,15 +49,7 @@ class HorizontalLinearStepper extends React.Component {
         }
 
         return (
-          <div
-            style={{
-                margin: '20px 100px',
-                minWidth: 700,
-                maxWidth: 1200,
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-          >
+          <div>
             <Card>
               <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
                 <Stepper activeStep={stepIndex}>

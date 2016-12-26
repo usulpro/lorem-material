@@ -50,18 +50,10 @@ var MaterialAppExampleProgress = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        {
-          style: {
-            margin: '20px 100px',
-            minWidth: 400,
-            maxWidth: 800,
-            display: 'flex',
-            justifyContent: 'center'
-          }
-        },
+        { style: { minWidth: 400 } },
         _react2.default.createElement(
           _Card.Card,
-          { style: { width: '100%' } },
+          { style: { width: '100%', paddingTop: 16 } },
           _react2.default.createElement(
             _Card.CardMedia,
             { style: { marginTop: 16 } },

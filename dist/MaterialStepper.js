@@ -92,15 +92,7 @@ var HorizontalLinearStepper = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        {
-          style: {
-            margin: '20px 100px',
-            minWidth: 700,
-            maxWidth: 1200,
-            display: 'flex',
-            justifyContent: 'center'
-          }
-        },
+        null,
         _react2.default.createElement(
           _Card.Card,
           null,

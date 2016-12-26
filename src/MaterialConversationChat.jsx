@@ -31,15 +31,7 @@ export default class MaterialAppExampleProgress extends React.Component {
 
     render() {
         return (
-          <div
-            style={{
-                margin: '20px 100px',
-                minWidth: 400,
-                maxWidth: 800,
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-          >
+          <div>
           <Paper style={paperStyle} zDepth={1} >
             <Card>
               <CardHeader

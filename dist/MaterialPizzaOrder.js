@@ -91,14 +91,7 @@ var PizzaOrder = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        {
-          style: {
-            margin: '20px 100px',
-            minWidth: 200,
-            maxWidth: 600,
-            display: 'flex',
-            justifyContent: 'center'
-          } },
+        null,
         _react2.default.createElement(
           _Card.Card,
           { style: { width: '100%' } },

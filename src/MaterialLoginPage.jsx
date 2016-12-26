@@ -20,13 +20,7 @@ export default class MaterialAppExampleProgress extends React.Component {
 
     render() {
         return (
-          <div
-          style={{
-              margin: '20px 100px',
-              minWidth: 400,
-              maxWidth: 450,
-          }}
-          >
+          <div>
           <Card style={{ width: '100%' }} >
             <CardHeader
               title="Login Page"

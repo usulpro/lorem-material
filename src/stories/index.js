@@ -23,16 +23,21 @@ reqThemes.keys().forEach((filename) => {
 
 
 const stories = storiesOf('React App', module)
+    .addDecorator((story) => {
+        const storyKind = story();
+        return (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: 20,
+            }}
+            className="centered-decorator"
+          >
+            {storyKind}
+          </div>);
+    })
     .addDecorator(muiTheme(themesList)) /* [lightTheme, darkTheme, greyTheme]*/
-    .addDecorator(story => (
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '50%', maxWidth: 500, minWidth: 200 }}>
-          {story()}
-          {/* SHOW_SUPPORT ? <SupportProject /> : null*/}
-        </div>
-      </div>
-    ))
-    .addDecorator(withKnobs);
 
 const lorems = require.context('../', true, /Material\w*.jsx/);
 lorems.keys().forEach((filename) => {
