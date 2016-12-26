@@ -7,6 +7,14 @@ install:
 npm i git+https://github.com/UsulPro/lorem-material.git --save
 ```
 
+usage:
+```shell
+import MaterialStepper from 'lorem-material/dist/MaterialStepper';
+// or any other Component from dist folder
+```
+
+list of avalible components [see](https://usulpro.github.io/lorem-material/) in demo page
+
 ## Material content filling
 ![Material](doc/icons/ic_account_balance_black.png)
 For easy themes design we required a realistic-looking content. It will be possible to try out different themes and immediately see how they look. For this we feel the need of help by designers and front-end developers in material design. Therefore, we are opening this trend and attract **#hacktoberfest** participants. We welcome all who wish to contribute.
